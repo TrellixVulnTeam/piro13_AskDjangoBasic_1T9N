@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from shop.models import Item
 
 # Create your views here.
@@ -12,3 +12,12 @@ def archives_year(request, year):
 #     return render(request, 'shop/item_list.html',{
 #         'item_list':qs,
 #     })
+
+# def view1(request):
+#     return HttpResponse('hello, ask company')
+
+# def view2(request):
+#     return render(request, 'template.html')
+
+# def view3(request):
+#     return JsonResponse({'hello':'ask company'})
