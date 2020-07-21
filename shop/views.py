@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
-from shop.models import Item
+# from shop.models import Item
 
 # Create your views here.
 
