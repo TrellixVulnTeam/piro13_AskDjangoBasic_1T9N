@@ -9,6 +9,9 @@ class Item(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta: # model class에 ordering 지정하기
+        ordering = ['id']
+
     def __str__(self):
         return self.name
 

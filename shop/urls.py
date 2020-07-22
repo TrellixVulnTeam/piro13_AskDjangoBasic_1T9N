@@ -8,5 +8,5 @@ app_name = 'shop'
 
 urlpatterns = [
     path('archives/<yyyy:year>/',views.archives_year),
-    # path('items/', item_list, name='item_list'),
+    path('item/', views.item_list),
 ]
