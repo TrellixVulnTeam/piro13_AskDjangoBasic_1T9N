@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'uesx*a#bv52a54o#iz_a4p)w(ej-dcgh+es&vhm$jbomapxpxb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True #True 시에만 쿼리 실행내역을 메모리에 누적
 
 ALLOWED_HOSTS = []
 
@@ -40,9 +40,11 @@ INSTALLED_APPS = [
     'shop',
     'blog',
     'django_extensions',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -121,3 +123,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+INTERNAL_IPS = ['127.0.0.1']
