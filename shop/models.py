@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 # Create your models here.
 class Item(models.Model):
@@ -17,8 +18,8 @@ class Item(models.Model):
 
 
 # #blog model
-# class Post(models.Model):
-#     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+class Post(models.Model):
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 #     title = models.CharField(max_length=100, db_index=True)
 #     slug = models.SlugField(allow_unicode=True, db_index=True)
 #     content = models.TextField(blank=True)
