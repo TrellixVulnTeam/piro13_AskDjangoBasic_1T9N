@@ -37,10 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'shop',
     'blog',
+
     'django_extensions',
     'debug_toolbar',
+    'django_jinja',
 ]
 
 MIDDLEWARE = [
@@ -57,6 +60,13 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'askcompany.urls'
 
 TEMPLATES = [
+    {
+        'BACKEND': "django_jinja.backend.Jinja2",
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "match_extension": ".jinja",
+        }
+    },
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [

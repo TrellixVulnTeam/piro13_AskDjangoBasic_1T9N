@@ -3,7 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from shop.models import Item
 import logging
 
-# logger = logging.etLogger(__name__)
+logger = logging.getLogger(__name__)
 
 # def post_list(request):
 #     logger.error('Somthing went wrong!')
@@ -19,7 +19,8 @@ def item_list(request):
     q = request.GET.get('q', '')
     if q:
         qs = qs.filter(name__icontains=q)
-    return render(request, 'shop/item_list.html',{
+    logger.debug('query: {}'.format(q))
+    return render(request, 'shop/item_list.jinja', {
         'item_list':qs,
         'q':q,
     })
