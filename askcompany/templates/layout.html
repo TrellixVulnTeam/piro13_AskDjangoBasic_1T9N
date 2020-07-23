@@ -7,6 +7,9 @@
     {% block extra_head %} {% endblock %}
 </head>
 <body>
+    <!-- {{value|json_script:'my-id'}}
+    <script id="my-id" type="application/json">{'hello':'world'}</script>
+    var value = JSON.parse(document.getElementById('my-id').textContent) -->
     <h1>ASK COMPANY</h1>
 
     {% block content %}
