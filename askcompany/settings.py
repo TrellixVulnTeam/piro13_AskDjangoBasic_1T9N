@@ -70,9 +70,10 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
+            # 파일 시스템 로더
             os.path.join(BASE_DIR, 'askcompany','templates'),
         ],
-        'APP_DIRS': True,
+        'APP_DIRS': True, # 앱 디렉토리 로더
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
