@@ -138,6 +138,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# 추천 settings
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'askcompany', 'static'),
+]
+
 INTERNAL_IPS = ['127.0.0.1']
 
 LOGGING = { 'version': 1, 
