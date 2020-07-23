@@ -25,7 +25,7 @@ SECRET_KEY = 'uesx*a#bv52a54o#iz_a4p)w(ej-dcgh+es&vhm$jbomapxpxb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True #True 시에만 쿼리 실행내역을 메모리에 누적
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [] # '*'
 
 
 # Application definition
@@ -59,7 +59,9 @@ ROOT_URLCONF = 'askcompany.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'askcompany','templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
